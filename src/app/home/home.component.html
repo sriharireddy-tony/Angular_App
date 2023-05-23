@@ -1,0 +1,215 @@
+<div class="head col-lg-12">
+    <div class="ps-2 mt-1"><img src="assets\Images\Dream-11-Icon-PNG-Image.jpg" height="40" width="50" /></div>
+    <div class="dreamHide">
+        <h1>DREAM11 APP</h1>
+    </div>
+    <div class="pe-2 mt-1">
+        <button class="btn btn-warning" style="margin-right: 20px;" (click)="signUp()">Sign Up</button>
+        <button class="btn btn-success" (click)="signIn()">Sign In</button>
+    </div>
+</div>
+<div class="px-4">
+    <!-- <div><img src="assets\Images\dream11-team.png" class="responsive-image" /></div> -->
+    <div class="mt-4">
+        <h3 class="text-center">It's easy to start playing on <span class="text-danger"><b>Dream11</b></span></h3>
+        <h5 class="text-center mt-3"><span style="background-color: rgb(187, 230, 250);">Play Fantasy Cricket on Dream11
+                and win big!</span></h5>
+        <p class="mt-3">Enter into the thrilling world of Fantasy sports, a strategy-based online sports game wherein
+            you can create a virtual team of real players
+            playing in real life matches. Create your team to win points based on all the players' performance in a live
+            game.Ready to challenge other
+            sports fans? Watch this video to learn how to play on Dream11 and get started now. Compete with sports fans,
+            make a perfect Dream11 team
+            with the best combination of players as per your knowledge and skill and win big.</p>
+        <div><img src="assets\Images\dream11_review.png" class="responsive-image" /></div>
+    </div>
+</div>
+<div class="text-white" style="background-color: #373737;">
+    <div class="d-flex justify-content-around">
+        <div class="">
+            <img src="assets\Images\dream11_footer.png" class="responsive-image" />
+        </div>
+        <div class="mt-4">
+            <ul>
+                <li>Download App</li>
+                <li>How to Play</li>
+                <li>Invite Friends</li>
+                <li>Fantacy Lists</li>
+                <li>Fantacy Football</li>
+                <li>Fantacy Cricket App</li>
+            </ul>
+        </div>
+        <div class="mt-3">
+            <img src="assets\Images\footer_Image.png" class="responsive-image" />
+        </div>
+    </div>
+    <hr class="mx-5" />
+    <div class="text-center">
+        <h5><b>CORPORATE OFFICE</b></h5>
+        <h6>ONE BKC, Tower A, 12th & 14th Floor, Unit 1201 & 1202 and 1401 & 1402, Plot C-66, G Block, Bandra Kurla
+            Complex, Bandra (East), Mumbai 400 051</h6>
+    </div>
+    <div class="d-flex justify-content-center text-bg-dark mt-3 py-2">
+        <h5>Privacy Policy</h5>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <h5>Terms & Conditions</h5>
+    </div>
+</div>
+
+<div>
+    <!-- The Modal -->
+    <div class="modal modal-cus shadow" tabindex="-1" role="dialog" [ngStyle]="{'display':signupFlag}">
+        <div class="signUp modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header py-0">
+                    <h4 class="text-primary">Registration Form</h4>
+                    <button type="button" class="btn-close" (click)="closeSignup()"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <form [formGroup]="signupForm">
+                            <div class="row mt-3">
+                                <div class="col-lg-6">
+                                    <span class="p-float-label">
+                                        <input pInputText id="username" formControlName="name" />
+                                        <label htmlFor="username">Name<b class="sup">*</b></label>
+                                    </span>
+                                </div>
+                                <div class="col-lg-6">
+                                    <span class="p-float-label">
+                                        <input pInputText id="username" formControlName="teamName"/>
+                                        <label htmlFor="username">Team Name</label>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-6">
+                                    <span class="p-float-label">
+                                        <input type="email" pInputText id="username" formControlName="email"/>
+                                        <label htmlFor="username">Email<b class="sup">*</b></label>
+                                    </span>
+                                </div>
+                                <div class="col-lg-6">
+                                    <span class="p-float-label">
+                                        <input type="number" pInputText id="username" formControlName="mobileNo"/>
+                                        <label htmlFor="username">Mobile No.<b class="sup">*</b></label>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-6">
+                                    <span class="p-float-label">
+                                        <input type="text" pInputText id="username" formControlName="password"/>
+                                        <label htmlFor="username">Password<b class="sup">*</b></label>
+                                    </span>
+                                </div>
+                                <div class="col-lg-6">
+                                    <span class="p-float-label">
+                                        <input type="text" pInputText id="username" formControlName="cPassword"/>
+                                        <label htmlFor="username">Confirm Password<b class="sup">*</b></label>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-6">
+                                    <span class="p-float-label">
+                                        <p-calendar [showIcon]="true" inputId="icon" [readonlyInput]="true"
+                                            dateFormat="dd-mm-yy" placeholder="Select Date" formControlName="dob"></p-calendar>
+                                        <label htmlFor="username">DOB<b class="sup">*</b></label>
+                                    </span>
+                                </div>
+                                <div class="col-lg-6">
+                                    <span class="p-float-label">
+                                        <input type="text" pInputText id="username" formControlName="city"/>
+                                        <label htmlFor="username">city</label>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-6 text-start">
+                                    <p class="gen">Gender</p>
+                                    <input class="form-check-input" type="radio" name="gender"
+                                        id="gender" formControlName="gender" value="male">&nbsp;male
+                                    <input class="form-check-input" type="radio" name="gender"
+                                        id="gender" formControlName="gender" value="female">&nbsp;female
+                                </div>
+                                <div class="col-lg-6">
+                                    <span class="p-float-label">
+                                        <p-dropdown [options]="countries" id="usernam" [(ngModel)]="selectedCountry"
+                                            optionLabel="name" [filter]="true" filterBy="name" [showClear]="true"
+                                            placeholder="Select" formControlName="state">
+                                            <ng-template pTemplate="selectedItem">
+                                                <div class="flex align-items-center gap-2" *ngIf="selectedCountry">
+                                                    <div>{{ selectedCountry.name }}</div>
+                                                </div>
+                                            </ng-template>
+                                            <ng-template let-country pTemplate="item">
+                                                <div class="flex align-items-center gap-2">
+                                                    <div>{{ country.name }}</div>
+                                                </div>
+                                            </ng-template>
+                                        </p-dropdown>
+                                        <label htmlFor="usernam">State<b class="sup">*</b></label>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="mt-2 text-start">
+                                <input class="form-check-input" type="checkbox" formControlName="isAgree"/> Iam agree with the Terms &
+                                Conditions<b class="sup">*</b>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="button" class="btn btn-outline-danger mx-2" (click)="signupClear()">Clear</button>
+                        <button type="submit" class="btn btn-primary" (click)="submitSignupForm()">Sign Up</button>
+                    </div>
+                    <p class="text-center mt-3">Already i have an account! <b class="link" (click)="footSignin()">
+                            Login</b></p>
+                </div>
+
+                <!-- Modal Footer -->
+                <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save</button>
+            </div> -->
+
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-cus shadow" tabindex="-1" role="dialog" [ngStyle]="{'display':signinFlag}">
+        <div class="signin modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header py-0">
+                    <h4 class="text-primary">Login Form</h4>
+                    <button type="button" class="btn-close" (click)="closeSignin()"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="text-center d-flex">
+                        <h6 style="width: 150px;">Mobile No.</h6>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="text-center d-flex mt-2">
+                        <h6 style="width: 150px;">Password</h6>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="button" class="btn btn-outline-danger mx-2" data-bs-dismiss="modal">Clear</button>
+                        <button type="button" class="btn btn-primary">SignIn</button>
+                    </div>
+                    <p class="text-center mt-3">I don't have an account! <b class="link" (click)="footSignup()"> Sign
+                            Up</b></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

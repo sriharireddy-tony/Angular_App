@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+@media (min-width: 992px){
+    .signUp {
+        --bs-modal-width: 570px !important;
+    }
+    .signin {
+        --bs-modal-width: 400px !important;
+    }
+}
+@media only screen and (max-width: 600px){
+    .dreamHide{
+        display: none;
+    }
+}
+::-webkit-scrollbar {
+    width: 0.6em;
+    height: 0.7em;
+    border-left: 1px solid #ddd !important;
+    background: #e8e8e8;
+}
+
+::-webkit-scrollbar-thumb {
+    background:rgb(105, 105, 255);
+    border-radius: 8px;
+}
+.p-dropdown{
+    width: 100% !important;
+}
+.link{
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(0, 37, 247);
+}
+.modal-cus {
+    background-color: #2925254f;
+    box-shadow: #0072c4;
+}
+.sup{
+    color: red;
+    font-size: 16px;
+}
+.p-calendar {
+    width: 100% !important;
+    height: 38px !important;
+}
+
+.p-button {
+    color: white !important;
+    background: rgb(172, 11, 247) !important;
+    border-right: 1px solid rgb(0, 24, 37) !important;
+}
+
+.p-datepicker table td {
+    padding: 0rem !important;
+}
+
+.p-datepicker table td>span.p-highlight {
+    color: white !important;
+    background: red !important;
+}
+
+.p-datepicker .p-datepicker-header {
+    padding: 0rem !important;
+}
+
+.p-datepicker table td>span {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    border-radius: 0% !important;
+}
+
+.p-datepicker .p-datepicker-header .p-datepicker-title {
+    line-height: 1rem !important;
+    color: black;
+    background-color: #fef4dd;
+}
+
+.p-datepicker:not(.p-datepicker-inline) .p-datepicker-header {
+    background: #fef4dd !important;
+}
+.p-float-label input, .p-dropdown{
+    height: 40px !important;
+}

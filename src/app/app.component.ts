@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular_Manu';
+  constructor(private fb:FormBuilder){
+    
+  }
+
+  city=['nellore','tirupathi','Hyderabad']
+
+  regForm = this.fb.group({
+    Name: [''],
+    Age: [''],
+    City: [""]
+  })
 }

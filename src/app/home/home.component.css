@@ -1,0 +1,26 @@
+.head{
+    display: flex;
+    justify-content: space-between;
+    background: red;
+    color: white;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+}
+.responsive-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  ul li{
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  .popCross{
+    margin-top: -16px;
+    margin-right: -16px;
+  }
+  .gen{
+    font-size: smaller;
+  }
