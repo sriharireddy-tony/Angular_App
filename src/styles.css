@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0px ;
+    margin: 0px ;
+}
 @media (min-width: 992px){
     .signUp {
         --bs-modal-width: 570px !important;
@@ -72,12 +76,51 @@
 .p-datepicker .p-datepicker-header .p-datepicker-title {
     line-height: 1rem !important;
     color: black;
-    background-color: #fef4dd;
+    background-color: #ffd679;
 }
 
 .p-datepicker:not(.p-datepicker-inline) .p-datepicker-header {
-    background: #fef4dd !important;
+    background: #ffd679 !important;
 }
 .p-float-label input, .p-dropdown{
     height: 40px !important;
+}
+.city .p-dropdown .p-dropdown-trigger{
+    color: transparent !important;
+}
+.drop .p-button.p-button-icon-only{
+    height: 38px !important;
+  }
+  .borderRed{
+    border: 1px solid red !important;
+    border-radius: 6px;
+  }
+  .drop .p-calendar-w-btn .p-inputtext{
+    height: 38px !important;
+  }
+  .drop1 .p-button.p-button-icon-only{
+    height: 40px !important;
+  }
+  i{
+    cursor: pointer;
+  }
+  .red{
+    color: red;
+  }
+  .p-sidebar {
+    background: bisque !important;
+    color: black !important;
+  }
+ .p-overlaypanel .p-overlaypanel-content {
+    padding: 10px 30px !important;
+}
+.p-paginator {
+    background: aliceblue !important;
+    color: black !important;
+    padding: 0px !important;
+    border-radius: 0px !important;
+    margin-top: -7px !important;
+}
+.paginator{
+    float: right;
 }

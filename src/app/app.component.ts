@@ -12,11 +12,4 @@ export class AppComponent {
     
   }
 
-  city=['nellore','tirupathi','Hyderabad']
-
-  regForm = this.fb.group({
-    Name: [''],
-    Age: [''],
-    City: [""]
-  })
 }

@@ -1,0 +1,49 @@
+
+.contai{
+    background-color: blue;
+    color: white;
+    height: 50px;
+    /* width: 100vw; */
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.contai .fa-bars{
+ font-size: 30px;
+ color: #ffffff;
+ padding: 10px 23px;
+}
+.contai h3{
+  color: white;
+  margin-top: 6px;
+}
+.contai div{
+    display: flex;
+    margin-right: 20px;
+    border: none;
+    background-color: transparent;
+}
+.contai div h5 {
+    margin-top: 13px;
+}
+.contai div div i{
+    font-size: 30px;
+}
+.sidebarTabs h5{
+cursor: pointer;
+padding: 10px 0px;
+margin: 0px;
+}
+.sidebarTabs hr{
+   margin: 0px;
+}
+.userOverlay h6{
+    cursor: pointer;
+}
+.tabHilight{
+    color: blueviolet !important;
+    font-size: 30px !important;
+    transform: scale(0.9) !important;
+}

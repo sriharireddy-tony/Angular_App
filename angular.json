@@ -32,7 +32,9 @@
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.js"
@@ -78,7 +80,8 @@
               "browserTarget": "Angular_Manu:build:production"
             },
             "development": {
-              "browserTarget": "Angular_Manu:build:development"
+              "browserTarget": "Angular_Manu:build:development",
+              "proxyConfig": "src/proxy.config.json"
             }
           },
           "defaultConfiguration": "development"

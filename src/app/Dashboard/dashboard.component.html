@@ -1,0 +1,33 @@
+<div class="contai">
+ <i class="fa-solid fa-bars" style="color: #ffffff;" (click)="sidebarVisible = true"></i>
+ <h3>Admin Dashboard</h3>
+ <div>
+    <h5>{{userName}}</h5> &nbsp; &nbsp; &nbsp;
+    <div class="card flex justify-content-center">
+        <p-overlayPanel #op>
+            <div class="userOverlay">
+                <h6 class="mt-2" >Edit Profile</h6>
+                <h6 >About</h6>
+                <hr/>
+                <h6 class="mb-0" (click)="logout()">Logout</h6>
+            </div>
+        </p-overlayPanel>
+            <i class="fa-solid fa-user-gear" (click)="op.toggle($event)"></i>
+    </div>
+ </div>
+</div>
+
+<p-sidebar [(visible)]="sidebarVisible">
+   <div class="sidebarTabs">
+    <h5 (click)="tabClick('userList')" [ngClass]="{'tabHilight':tabClickStr == 'userList'}">Users List</h5>
+    <hr/>
+    <h5 (click)="tabClick('teamsUpdate')" [ngClass]="{'tabHilight':tabClickStr == 'teamsUpdate'}">Teams Update</h5>
+    <hr/>
+    <h5 (click)="tabClick('playersUpdate')" [ngClass]="{'tabHilight':tabClickStr == 'playersUpdate'}">Players Update</h5>
+    <hr/>
+   </div>
+</p-sidebar>
+
+<app-users-list *ngIf="tabClickStr == 'userList'"></app-users-list>
+<app-teams-update *ngIf="tabClickStr == 'teamsUpdate'"></app-teams-update>
+<app-team-players *ngIf="tabClickStr == 'playersUpdate'"></app-team-players>

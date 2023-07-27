@@ -1,0 +1,46 @@
+<p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
+<div class="container-fluid">
+  <div class="textSearch">
+    <input class="form-control" type="text" placeholder="Search..." [(ngModel)]="searchText">
+    <i class="fa-solid fa-magnifying-glass" *ngIf="!searchText"></i>
+    <i class="fa-solid fa-xmark" style="color: #ff0000;" *ngIf="searchText" (click)="clearText()"></i>
+  </div>
+    <div class="tablediv">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                    <th>Team Name</th>
+                    <th>Email</th>
+                    <th>Mobile No.</th>
+                    <th>City</th>
+                    <th>DOB</th>
+                    <th>Gender</th>
+                    <th>isAdmin</th>
+                    <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of users | searchFilter: searchText :['name','teamName','email','mobileNo','city','dob','gender','isAdmin']; let i = index" >
+                <td>{{product.name}}</td>
+                <td>{{product.teamName}}</td>
+                <td>{{product.email}}</td>
+                <td>{{product.mobileNo}}</td>
+                <td>{{product.city}}</td>
+                <td>{{product.dob}}</td>
+                <td>{{product.gender}}</td>
+                <td>{{product.isAdmin}}</td>
+                <td>
+                    <div class="editDel">
+                        <i class="fa-solid fa-user-pen"></i>
+                        <i class="fa-solid fa-trash" style="margin-left: 20px;" (click)="deleteUser(product);"></i>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- <div class="paginator">
+          <p-paginator (onPageChange)="onPageChange($event)"  [first]="first" [rows]="rows" [totalRecords]="users.length"></p-paginator>
+        </div> -->
+    </div>
+</div>

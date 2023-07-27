@@ -5,3 +5,13 @@
     justify-content: center;
     color:red
 }
+table{
+    border-collapse: separate;
+    border-spacing: 6px;
+}
+table > tbody >tr >td , table > thead >tr >th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid grey;
+    border-radius: 3px;
+}

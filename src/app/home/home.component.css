@@ -24,3 +24,17 @@
   .gen{
     font-size: smaller;
   }
+  .regCSS{
+    background-color: blueviolet;
+    color: white;
+  }
+  .btnClose{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+  }
+  .btnClose:hover{
+    color: #f7ff00;
+    transform: scale(1.2);
+  }
