@@ -1,0 +1,43 @@
+.tablediv{
+    padding: 20px 40px;
+}
+.textuser{
+    margin-top: 5px;
+    color: blue;
+    text-align: center;
+}
+div table thead tr {
+    background-color: black;
+    color: white;
+}
+div table tbody tr:hover{
+    background-color: rgb(255, 247, 223);
+    color: black;
+}
+.editDel i{
+font-size: 22px;
+}
+.editDel .fa-user-pen{
+    color: #075d03;
+}
+.editDel .fa-trash{
+    color: red;
+} 
+.textSearch{
+    margin-top: 15px;
+    width: 20%;
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 3vw;
+    position: relative;
+}
+.textSearch .fa-magnifying-glass, .textSearch .fa-xmark{
+    position: absolute;
+    top: 9px;
+    right: 13px;
+    font-size: 21px;
+}
+.textSearch .fa-xmark{
+    font-size: 25px;
+    top: 6px;
+}
